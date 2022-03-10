@@ -1,0 +1,227 @@
+h1{
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #DB434D;
+    text-align: center;
+}
+.card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.add-card{
+    margin: 10px;
+    width: 30ch;
+    height: 40ch;
+    position: relative;
+    background-color: darkblue;
+    background-image: url("https://loremflickr.com/300/400");
+    border-radius: 20px;
+}
+.add-card > .card-overlay
+{
+    position: absolute;
+    width: 30ch;
+    height: 40ch;
+    padding: 0px;
+    margin: 0px;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+}
+.add-card > .card-overlay > .dot {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    font-size: 3em;
+    font-weight: 900;
+    border: none;
+    text-align: center;
+  }
+  .add-card > .card-overlay > .dot:hover {
+    background-color: rgb(224, 199, 199);
+    cursor:pointer;
+  }
+.add-card > .card-overlay > .dot > p {
+    position: relative;
+    top: -25%;
+    text-align: center;
+    
+  }
+.card{
+    margin: 5px;
+    width: 30ch;
+    height: 40ch;
+    position: relative;
+    /*background-image: url("https://loremflickr.com/300/400");*/
+    border-radius: 20px;
+    
+}
+.card > .imagecard{
+    width: 30ch;
+    height: 40ch;
+    position: relative;
+    border-radius: 20px;
+}
+.card > .edit-button{
+    display: none;
+    width: 10%;
+    position: absolute; 
+    right: 0;
+    margin: 5px;
+}
+.card:hover .edit-button{
+    display: inline;
+}
+.card > .edit-button:hover{
+    width: 15%;
+}
+.card > .card-overlay{
+    width: 30ch;
+    height: 20ch;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;         
+    bottom: 0px;       
+    right: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.card-overlay > h2{
+    position: relative;
+    padding-top: 0px;
+    margin-top: 4px;
+    padding-left: 5px;
+    color: white;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card-overlay > p{
+    color: aliceblue;
+    font-size: 0.95em;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.full-overlay{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.overlay-bg{
+    display: none;
+    background-color: aliceblue;
+    border-radius: 10px;
+    position: fixed;
+    width: 70%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    aspect-ratio: 16/9;
+}
+.overlay-bg > .overlay-close{
+    position: absolute;
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(230, 75, 75);
+    border-radius: 50%;
+}
+.overlay-bg > .overlay-close:hover{
+    position: absolute;
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 196, 196);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.overlay-bg >.leftcontent{
+    float: left;
+    margin-left: 4%;
+    margin-top: 2%;
+    width: 60%;
+    height: 90%;
+}
+
+.overlay-bg > .rightcontent{
+    float: right;
+    margin-right: 4%;
+    width: 30%;
+    height: 100%;
+    background-color:rgba(220, 20, 60, 0.041);
+}
+
+.leftcontent > .editable-title{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+
+.leftcontent > h3 {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+.leftcontent > p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+.rightcontent > .editable-image{
+    border-radius: 10px;
+    margin: 5%;
+    width: 90%;
+}
+
+.rightcontent > .star-wrapper{
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, 0);
+    background-color: rgba(105, 105, 117, 0);
+    border-radius: 10px
+}
+.star-wrapper > *{
+    width: 15%;
+    height: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.big-edit-button{
+    position: fixed;
+    right: 4%;
+    top: 3%;
+    display: inline;
+    width: 10%;
+}
+.big-edit-button:hover{
+    width: 10%;
+}
+/*
+.rightcontent > .delete-button{
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: rgb(230, 75, 75);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.rightcontent > .delete-button:hover{
+    background-color: rgb(255, 196, 196);
+}

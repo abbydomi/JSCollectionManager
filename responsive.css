@@ -1,0 +1,48 @@
+@media screen and (max-width:  1000px){
+  .rightcontent > .editable-image{
+    display: none;
+  }
+  .overlay-bg{
+    display: none;
+    background-image: url("https://loremflickr.com/300/400");
+    background-size: cover;
+    border-radius: 10px;
+    position: fixed;
+    width: 70%;
+    height: 90%;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+  } 
+  .overlay-bg > .leftcontent{
+    margin-top: 5ch;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    height: 92%;
+  }
+  .leftcontent > .editable-title{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+  }
+  .leftcontent > h2 {
+    color: white;
+  }
+  .leftcontent > h3 {
+    color: white;
+  }
+  .leftcontent > p {
+    color: white;
+  }
+  .rightcontent > .star-wrapper{
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px
+  }
+}

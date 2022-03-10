@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1">
+        <link rel= "stylesheet" type="text/css" href="styles.css">
+        <link rel= "stylesheet" type="text/css" href="responsive.css">
+        <title>Your collection</title>
+    </head>
+    <body onload="loadCards()">
+        <div>
+            <h1>Your collection</h1>
+        </div>
+        
+        <div class = "card-wrapper">
+            <div class = "add-card">
+                <div class = "card-overlay">
+                    <button class ="dot" onclick="createCard()">+</button>
+                </div>
+            </div>
+            <!--<div class = "card">
+                <img onclick = "overlayOpen()"class = "edit-button" src = "images/edit.png">
+                <div class = "card-overlay">
+                    <h2>A really really long title or something, yup. hhmh.</h2>
+                    <p>Card description, with a bit more of text and such, pretty cool, text text many text wow, just tons of info, more than a tweet. :P yess </p>
+                </div>
+            </div>-->
+            
+            </div>
+        </div>
+
+        <div onclick = 'overlayClose()' class = "full-overlay" id = "overlay"></div>
+        <div class = "overlay-bg" id = "overlay">
+            <div class = "overlay-close" onclick="overlayClose()"></div>
+            <div class = "leftcontent">
+                <h2 class = "editable-title" contenteditable="true" maxlength="50">A really really long title or something, yup. hhmh.</h2>
+                <h3 class = "editable-author" contenteditable="true">Author</h3>
+                <h3 class = "separator"> | </h3>
+                <h3 class = "editable-year" contenteditable="true">Year</h3>
+                <p  class = "editable-desc" contenteditable="true">Card description, with a bit more of text and such, pretty cool, text text many text wow, just tons of info, more than a tweet. :P yess</p>
+                <p  class = "editable-comment" contenteditable="true">This is your comment on the topic.</p>
+            </div>
+            <div class = "rightcontent">
+                <img class = "editable-image" src="https://loremflickr.com/300/400">
+                <input  type="file" accept="image/*" class = "big-edit-button" >
+                </img>
+                <div class = "star-wrapper">
+                    <img id = "star-1" src="images/star-full.png">
+                    <img id = "star-2" src="images/star.png">
+                    <img id = "star-3" src="images/star.png">
+                    <img id = "star-4" src="images/star.png">
+                    <img id = "star-5" src="images/star.png">
+                </div>
+                <h3 class = "delete-button">X Delete</h3>
+            </div>
+        </div>
+        <script type="text/javascript" src ="jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src ="logic.js"></script>
+    </body>
